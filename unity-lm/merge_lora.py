@@ -131,7 +131,7 @@ def plot_training_graphs(adapter_dir: str, out_dir: str) -> None:
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--base", default="Qwen/Qwen2.5-Coder-1.5B-Instruct")
+    p.add_argument("--base", default="Qwen/Qwen2.5-Coder-3B-Instruct")
     p.add_argument("--adapter", default="./lora_adapter")
     p.add_argument("--out", default="./merged_fp16_model")
     args = p.parse_args()

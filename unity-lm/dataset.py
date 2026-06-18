@@ -436,7 +436,7 @@ def build_dataset(
 # ──────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     # from transformers import AutoTokenizer
-    # tok = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-Coder-1.5B-Instruct")
+    # tok = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-Coder-3B-Instruct")
     #
     # # (A) 기존 MVP 동작 (Erocal + ibranze, completion-only)
     # train_ds, eval_ds = build_dataset(tok, max_length=2048)

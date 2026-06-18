@@ -1,5 +1,8 @@
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning, module="bitsandbytes")
+
 """
-train.py — Qwen2.5-Coder-1.5B-Instruct QLoRA 파인튜닝 (Unity 코딩 어시스턴트)
+train.py — Qwen2.5-Coder-3B-Instruct QLoRA 파인튜닝 (Unity 코딩 어시스턴트)
 환경  : Ubuntu 22.04 / Python 3.10+ / CUDA 12.x
 GPU   : RTX 5060 (Blackwell) 최적화 — max_seq_len 4096, batch 4, Flash Attention 2
 
@@ -146,11 +149,11 @@ def get_fallback_schedule(
 
 def parse_args():
     p = argparse.ArgumentParser(
-        description="Qwen2.5-Coder-1.5B QLoRA 파인튜닝 — RTX 5060 최적화"
+        description="Qwen2.5-Coder-3B QLoRA 파인튜닝 — RTX 5060 최적화"
     )
 
     # 경로
-    p.add_argument("--model_id",   default="Qwen/Qwen2.5-Coder-1.5B-Instruct")
+    p.add_argument("--model_id",   default="Qwen/Qwen2.5-Coder-3B-Instruct")
     p.add_argument("--base_dir",   default="./output",
                    help="모든 출력의 루트 디렉토리")
     p.add_argument("--output_dir", default=None,
